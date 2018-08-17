@@ -1,4 +1,8 @@
 using CrossSolar.Domain;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CrossSolar.Repository
 {

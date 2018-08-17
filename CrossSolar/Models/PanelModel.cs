@@ -13,7 +13,7 @@ namespace CrossSolar.Models
 
         [Range(-180, 180)] public double Longitude { get; set; }
 
-        [Required] public string Serial { get; set; }
+        [Required][StringLength(maximumLength: 16,MinimumLength =16,ErrorMessage ="Must Be 16 Characters")] public string Serial { get; set; }
 
         public string Brand { get; set; }
     }

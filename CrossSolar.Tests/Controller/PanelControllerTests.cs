@@ -1,9 +1,9 @@
-using System.Threading.Tasks;
 using CrossSolar.Controllers;
 using CrossSolar.Models;
 using CrossSolar.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace CrossSolar.Tests.Controller

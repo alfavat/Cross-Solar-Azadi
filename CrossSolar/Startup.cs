@@ -3,6 +3,7 @@ using CrossSolar.Exceptions;
 using CrossSolar.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,7 +44,12 @@ namespace CrossSolar
                 app.UseExceptionHandler();
             }
 
-            app.UseMvc();
+            app.UseMvc(ConfigureRoute);
+          
+        }
+        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        {
+            routeBuilder.MapRoute("Default", "{controller = Panel}/{action = GetPanels}/{id?}");
         }
     }
 }
